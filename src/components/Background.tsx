@@ -1,0 +1,40 @@
+/**
+ * Ambient backdrop. Three quiet layers, all fixed + non-interactive:
+ *   1. a faint amber glow bleeding from the top (ties the accent into the air)
+ *   2. a vignette that sinks the edges into the warm black
+ *   3. fine film grain so the flat dark never looks like dead pixels
+ * Intentionally restrained — the magnetic dock is where the boldness goes.
+ */
+const GRAIN =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E";
+
+export function Background() {
+  return (
+    <div aria-hidden className="pointer-events-none fixed inset-0 -z-10">
+      {/* amber glow from the top */}
+      <div
+        className="absolute inset-x-0 top-0 h-[70vh]"
+        style={{
+          background:
+            "radial-gradient(60% 80% at 50% -10%, rgba(246,169,59,0.14), rgba(246,169,59,0.04) 40%, transparent 70%)",
+        }}
+      />
+      {/* vignette */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(120% 100% at 50% 0%, transparent 55%, rgba(0,0,0,0.55) 100%)",
+        }}
+      />
+      {/* grain */}
+      <div
+        className="absolute inset-0 opacity-[0.05] mix-blend-soft-light"
+        style={{
+          backgroundImage: `url("${GRAIN}")`,
+          backgroundSize: "160px 160px",
+        }}
+      />
+    </div>
+  );
+}

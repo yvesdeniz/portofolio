@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+/* =========================================================================
+   portofoliov3 — design tokens
+   Warm "phosphor-dark" identity: warm near-black + a single amber accent.
+   Deliberately diverges from the cold blue-black + teal reference.
+   To retune the brand, change --color-accent below (one token).
+   ========================================================================= */
+@theme {
+  /* surfaces */
+  --color-bg: #0b0a09; /* warm near-black */
+  --color-bg-2: #100e0b; /* a touch lifted */
+  --color-surface: #15120e; /* solid card base */
+
+  /* text */
+  --color-fg: #ece6dc; /* warm off-white (not pure white) */
+  --color-muted: #9a9082; /* warm gray body */
+  --color-subtle: #6b6358; /* captions / least emphasis */
+
+  /* lines + accent */
+  --color-line: rgba(236, 230, 220, 0.09); /* hairline borders */
+  --color-line-strong: rgba(236, 230, 220, 0.16);
+  --color-accent: #f6a93b; /* signature amber (phosphor) */
+  --color-accent-soft: #ffce85; /* lighter amber for glows */
+  --color-accent-ink: #1a1206; /* text on amber fills */
+
+  /* type roles */
+  --font-display: var(--font-bricolage); /* characterful display */
+  --font-sans: var(--font-geist-sans); /* body */
+  --font-mono: var(--font-geist-mono); /* technical labels / specs */
+
+  /* motion */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ------------------------------------------------------------------ base */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* warm ambient: a faint amber glow up top + grain handled by <Background/> */
+  ::selection {
+    background-color: color-mix(in oklab, var(--color-accent) 32%, transparent);
+    color: var(--color-fg);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/* tabular figures for specs / timers / data */
+.nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* now-playing equalizer: a few amber bars bouncing out of phase */
+@keyframes eq {
+  0%,
+  100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+.eq-bar {
+  transform-origin: bottom;
+  animation: eq 0.9s ease-in-out infinite;
+}
+
+/* respect reduced motion globally */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
