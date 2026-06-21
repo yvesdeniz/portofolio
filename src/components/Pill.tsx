@@ -56,8 +56,8 @@ export function SocialPill({
       rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
       aria-label={label}
       className={cn(
-        "group inline-flex items-center gap-2 rounded-full border border-line bg-white/[0.02] text-muted",
-        "transition duration-200 hover:-translate-y-0.5 hover:border-line-strong hover:text-fg",
+        "group inline-flex items-center gap-2 rounded-full border border-line bg-white/[0.02] text-fg",
+        "transition duration-200 hover:-translate-y-0.5 hover:border-line-strong hover:text-accent",
         showLabel ? "px-3.5 py-2" : "h-10 w-10 justify-center",
       )}
     >

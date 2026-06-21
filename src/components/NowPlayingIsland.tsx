@@ -68,6 +68,8 @@ export function NowPlayingIsland() {
               <span className="truncate font-medium text-fg">{np.track.title}</span>
               <span className="shrink-0 text-subtle">·</span>
               <span className="truncate text-muted">{np.track.artist}</span>
+              <span className="shrink-0 text-subtle">·</span>
+              <span className="truncate text-fg">{np.track.album}</span>
             </div>
           </motion.div>
         )}

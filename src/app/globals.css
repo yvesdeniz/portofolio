@@ -1,11 +1,5 @@
 @import "tailwindcss";
 
-/* =========================================================================
-   portofoliov3 — design tokens
-   Warm "phosphor-dark" identity: warm near-black + a single amber accent.
-   Deliberately diverges from the cold blue-black + teal reference.
-   To retune the brand, change --color-accent below (one token).
-   ========================================================================= */
 @theme {
   /* surfaces */
   --color-bg: #0b0a09; /* warm near-black */
@@ -20,9 +14,10 @@
   /* lines + accent */
   --color-line: rgba(236, 230, 220, 0.09); /* hairline borders */
   --color-line-strong: rgba(236, 230, 220, 0.16);
-  --color-accent: #f6a93b; /* signature amber (phosphor) */
-  --color-accent-soft: #ffce85; /* lighter amber for glows */
-  --color-accent-ink: #1a1206; /* text on amber fills */
+  --accent-raw: #6c98e0; /* raw input — signature amber (phosphor) */
+  --color-accent: oklch(from var(--accent-raw) 0.77 0.14 h); /* hue from raw, brand L/C pinned */
+  --color-accent-soft: oklch(from var(--color-accent) calc(l + 0.12) calc(c * 0.85) h); /* lighter, for glows */
+  --color-accent-ink: oklch(from var(--color-accent) 0.2 calc(c * 0.3) h); /* dark text on accent fills */
 
   /* type roles */
   --font-display: var(--font-bricolage); /* characterful display */
@@ -33,7 +28,7 @@
   --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* ------------------------------------------------------------------ base */
+/* ----------------------------------------------------------------- base */
 @layer base {
   html {
     scroll-behavior: smooth;

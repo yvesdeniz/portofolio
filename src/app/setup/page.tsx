@@ -38,7 +38,7 @@ export default function SetupPage() {
                        key={gear.name}
                        className="flex items-center gap-4 overflow-hidden p-4"
                   >
-                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-line bg-white/[0.02] text-accent-soft">
+                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-line bg-white/[0.02] text-fg">
                       <Icon className="h-5 w-5" strokeWidth={1.6} />
                     </span>
                     <div className="min-w-0 flex-1">

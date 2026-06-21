@@ -104,7 +104,7 @@ function DockIcon({
           "flex aspect-square items-center justify-center rounded-xl border transition-colors duration-200",
           active
             ? "border-accent/40 bg-accent/10 text-accent"
-            : "border-line bg-white/[0.02] text-muted group-hover:text-fg",
+            : "border-line bg-white/[0.02] text-fg group-hover:text-accent",
         )}
       >
         <Icon className="h-[44%] w-[44%]" strokeWidth={1.6} />

@@ -11,7 +11,7 @@ function Avatar({ src, Icon }: { src?: string; Icon: IconType }) {
   const [failed, setFailed] = useState(false);
   const showImg = src && !failed;
   return (
-    <span className="grid h-14 w-14 shrink-0 place-items-center overflow-hidden rounded-full border border-line bg-white/[0.03] text-accent-soft">
+    <span className="grid h-14 w-14 shrink-0 place-items-center overflow-hidden rounded-full border border-line bg-white/[0.03] text-fg">
       {showImg ? (
         <img
           src={src}
@@ -100,7 +100,7 @@ export function ContactChannels() {
           const copied = copiedKey === c.key;
           return (
             <GlassCard key={c.key} className="flex items-center gap-3 p-4">
-              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-line bg-white/[0.02] text-accent-soft">
+              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-line bg-white/[0.02] text-fg">
                 <Icon className="h-5 w-5" />
               </span>
               <div className="min-w-0 flex-1">

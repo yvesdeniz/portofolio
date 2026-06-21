@@ -1,6 +1,6 @@
 /**
  * Ambient backdrop. Three quiet layers, all fixed + non-interactive:
- *   1. a faint amber glow bleeding from the top (ties the accent into the air)
+ *   1. a faint accent glow bleeding from the top (ties the accent into the air)
  *   2. a vignette that sinks the edges into the warm black
  *   3. fine film grain so the flat dark never looks like dead pixels
  * Intentionally restrained — the magnetic dock is where the boldness goes.
@@ -11,12 +11,12 @@ const GRAIN =
 export function Background() {
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 -z-10">
-      {/* amber glow from the top */}
+      {/* accent glow from the top — follows --color-accent */}
       <div
         className="absolute inset-x-0 top-0 h-[70vh]"
         style={{
           background:
-            "radial-gradient(60% 80% at 50% -10%, rgba(246,169,59,0.14), rgba(246,169,59,0.04) 40%, transparent 70%)",
+            "radial-gradient(60% 80% at 50% -10%, color-mix(in oklab, var(--color-accent) 14%, transparent), color-mix(in oklab, var(--color-accent) 4%, transparent) 40%, transparent 70%)",
         }}
       />
       {/* vignette */}
