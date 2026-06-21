@@ -8,7 +8,7 @@ import { GoIcon, RustIcon, TypescriptIcon, PythonIcon, JSIcon, BunIcon, NextIcon
 
 export type Tool = {
   name: string;
-  icon: ComponentType<{ className?: string }> | null;
+  icon: ComponentType<{ className?: string }>;
 };
 
 export type ToolGroup = {
