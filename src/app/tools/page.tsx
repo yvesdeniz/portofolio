@@ -32,9 +32,9 @@ export default function ToolsPage() {
                     </span>
                     <div className="min-w-0">
                       <div className="font-medium text-fg">{tool.name}</div>
-                      {*<div className="truncate text-sm text-muted">
+                      {/* <div className="truncate text-sm text-muted">
                         {tool.note}
-                      </div>*}
+                      </div> */}
                     </div>
                   </GlassCard>
                 );
