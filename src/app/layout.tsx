@@ -7,19 +7,21 @@ import { Background } from "@/components/Background";
 import { Dock } from "@/components/Dock";
 import { profile } from "@/data/profile";
 
+export let pageColor = '#f6a93b'
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
   subsets: ["latin"],
   weight: ["500", "600", "700"],
-  display: "swap",
+  display: "swap"
 });
 
 export const metadata: Metadata = {
-  title: `${profile.name} — ${profile.role}`,
+  title: `${profile.name} ${profile.role}`,
   description: `${profile.name}, ${profile.role}. ${profile.bio.replace(/\*\*/g, "")}`,
   icons: {
     icon: './icon.png'
-  }
+  },
+  themeColor: pageColor
 };
 
 export default function RootLayout({
