@@ -34,9 +34,9 @@ export default function SetupPage() {
               {group.items.map((gear) => {
                 const Icon = gear.icon;
                 return (
-                  <GlassCard
-                    key={gear.name}
-                    className="flex items-center gap-4 p-4"
+                   <GlassCard
+                       key={gear.name}
+                       className="flex items-center gap-4 overflow-hidden p-4"
                   >
                     <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-line bg-white/[0.02] text-accent-soft">
                       <Icon className="h-5 w-5" strokeWidth={1.6} />
