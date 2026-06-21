@@ -48,7 +48,7 @@ export function NowPlayingIsland() {
               reduce ? { duration: 0 } : { duration: 0.35, ease: [0.22, 1, 0.36, 1] }
             }
             className={cn(
-              "flex max-w-[90vw] items-center gap-3 rounded-full border border-line bg-bg-2/80 py-2 pl-2 pr-5 sm:max-w-md",
+              "flex max-w-[90vw] items-center gap-3 rounded-lg border border-line bg-bg-2/80 py-2 pl-2 pr-5 sm:max-w-md",
               "shadow-[0_16px_50px_-18px_rgba(0,0,0,0.85)] backdrop-blur-xl",
             )}
           >
