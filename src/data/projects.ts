@@ -37,8 +37,8 @@ export const projects: Project[] = [
       "Trusted by thousands.",
     ],
     links: [
-      { label: "Live", href: "cvrse.lol" },
-      { label: "Source", href: "github.com/yvesdeniz/cvrse" },
+      { label: "Live", href: "https://cvrse.lol" },
+      { label: "Source", href: "https://github.com/yvesdeniz/cvrse" },
     ],
   },
   {
@@ -57,7 +57,7 @@ export const projects: Project[] = [
       "Cut load time / cost / complexity by a meaningful amount.",
       "A detail a potential client would care about.",
     ],
-    links: [{ label: "Live", href: "getsubtext.xyz" }],
+    links: [{ label: "Live", href: "https://getsubtext.xyz" }],
   },
   {
     slug: "ripmcp",

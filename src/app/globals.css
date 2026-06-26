@@ -21,7 +21,6 @@
 
   /* type roles */
   --font-display: var(--font-bricolage); /* characterful display */
-  --font-sans: var(--font-geist-sans); /* body */
   --font-mono: var(--font-geist-mono); /* technical labels / specs */
 
   /* motion */
