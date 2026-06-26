@@ -14,8 +14,8 @@
   /* lines + accent */
   --color-line: rgba(236, 230, 220, 0.09); /* hairline borders */
   --color-line-strong: rgba(236, 230, 220, 0.16);
-  --accent-raw: #6c98e0; /* raw input — signature amber (phosphor) */
-  --color-accent: oklch(from var(--accent-raw) 0.77 0.14 h); /* hue from raw, brand L/C pinned */
+  --accent-raw: #5c5c5c; /* raw input — signature amber (phosphor) */
+  --color-accent: oklch(from var(--accent-raw) 0.77 c h); /* L pinned; chroma + hue from raw (gray in -> gray out) */
   --color-accent-soft: oklch(from var(--color-accent) calc(l + 0.12) calc(c * 0.85) h); /* lighter, for glows */
   --color-accent-ink: oklch(from var(--color-accent) 0.2 calc(c * 0.3) h); /* dark text on accent fills */
 

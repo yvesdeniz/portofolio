@@ -16,7 +16,7 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: `${profile.name} ${profile.role}`,
+  title: `${profile.name}`,
   description: `${profile.name}, ${profile.role}. ${profile.bio.replace(/\*\*/g, "")}`,
   icons: {
     icon: './icon.png'

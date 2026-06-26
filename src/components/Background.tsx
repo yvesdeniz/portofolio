@@ -19,6 +19,14 @@ export function Background() {
             "radial-gradient(60% 80% at 50% -10%, color-mix(in oklab, var(--color-accent) 14%, transparent), color-mix(in oklab, var(--color-accent) 4%, transparent) 40%, transparent 70%)",
         }}
       />
+      {/* mid-page ambient blob — gives the frosted cards something to refract */}
+      <div
+        className="absolute left-1/2 top-[38%] h-[42vh] w-[80vw] max-w-3xl -translate-x-1/2 blur-3xl"
+        style={{
+          background:
+            "radial-gradient(50% 50% at 50% 50%, color-mix(in oklab, var(--color-accent) 22%, transparent), transparent 72%)",
+        }}
+      />
       {/* vignette */}
       <div
         className="absolute inset-0"

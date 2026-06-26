@@ -69,10 +69,10 @@ export default async function ProjectPage({
       </header>
 
       {/* hero placeholder */}
-      <GlassCard className="relative mt-8 grid aspect-[16/9] place-items-center overflow-hidden p-0">
+      {/* <GlassCard className="relative mt-8 grid aspect-[16/9] place-items-center overflow-hidden p-0">
         <div className="absolute inset-0 bg-gradient-to-br from-accent/12 via-transparent to-transparent" />
         <FolderGit2 className="relative h-9 w-9 text-subtle" strokeWidth={1.3} />
-      </GlassCard>
+      </GlassCard> */}
 
       {/* overview */}
       <section className="mt-10">

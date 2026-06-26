@@ -74,7 +74,6 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* floating now-playing island — appears only while a track is live */}
       <NowPlayingIsland />
     </PageShell>
   );
