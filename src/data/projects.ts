@@ -1,4 +1,4 @@
-export type ProjectStatus = "live" | "wip" | "archived";
+export type ProjectStatus = "live" | "wip" | "archived" | 'OSS';
 
 export type ProjectLink = {
   label: string;
@@ -20,10 +20,30 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+    {
+    slug: "capsule",
+    title: "capsule",
+    tagline: "Open source, low spec, no-bloat music streaming platform.",
+    year: "2026",
+    thumbnail: '/projects/capsule.png',
+    role: "Lead Developer",
+    status: "OSS",
+    tags: ["Rust", "Tauri", "React"],
+    overview:
+      "One player for whichever service your music actually lives in streaming or your own files. The speed comes from keeping the network off the UI path: library metadata is mirrored into local SQLite, artwork is cached on disk, and lists are virtualised.",
+    highlights: [
+      "Sans-I/O playback core. 21 tests, zero mocks.",
+      "Two backends, one command stream.",
+      "Real Win32 chrome, Snap Layouts and all.",
+    ],
+    links: [
+      { label: "Source", href: "https://github.com/yvesdeniz/capsule" },
+    ],
+  },
   {
     slug: "curse",
     title: "curse",
-    tagline: "The last bot you'll ever n",
+    tagline: "The last bot you'll ever need.",
     year: "2026",
     thumbnail: '/projects/curse.png',
     role: "Lead Developer & Founder",

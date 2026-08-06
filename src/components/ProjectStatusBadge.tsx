@@ -11,6 +11,7 @@ const META: Record<ProjectStatus, { label: string; cls: string }> = {
     label: "archived",
     cls: "border-line bg-transparent text-subtle",
   },
+  OSS: { label: "live", cls: "border-accent/30 bg-accent/10 text-accent" },
 };
 
 export function ProjectStatusBadge({ status }: { status: ProjectStatus }) {
