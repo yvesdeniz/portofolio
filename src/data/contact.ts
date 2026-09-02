@@ -21,12 +21,12 @@ export const contacts: ContactChannel[] = [
   {
     key: "discord",
     label: "Discord",
-    handle: "@m1gr",
+    handle: "@soakedpanties06",
     note: "fastest way to reach me :)",
     href: "https://discord.com/users/1306505500699000856",
     icon: DiscordIcon,
     primary: true,
-    avatar: "/avatar.jpg",
+    avatar: "/avatar_new.jpg",
   },
   {
     key: "github",
